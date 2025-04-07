@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Gótica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Loja Gótica</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/aluno/Documents/aromas%20doces/public/index.html#">Início</a></li>
+                <li><a href="file:///C:/Users/aluno/Documents/aromas%20doces/public/indexsobre.html">Sobre</a></li>
+                <li><a href="file:///C:/Users/aluno/Documents/aromas%20doces/public/carrinho.html">carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Estilo Único, Roupas Incríveis</h2>
+        <p>Explore a nossa coleção gótica inspirada em "Paradise Kiss" e "Nana".</p>
+    </section>
+
+    <section class="produtos">
+        <h3>Produtos em Destaque</h3>
+        <div class="produto">
+            <img src="https://i.pinimg.com/originals/71/e1/f1/71e1f15b6480a7d96d0b99583cc25d7f.jpg" alt="Roupa inspirada em Paradise">
+            <div class="descricao">
+                <h4>Roupa inspirada em Paradise Kiss</h4>
+                <p>R$ 199,99</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Comprar</button>
+            </div>
+        </div>
+        <div class="produto">
+            <img src="https://ae01.alicdn.com/kf/Sa31e2f201a9e4d2b81c7d1c37763038cl/NANA-Japanese-Anime-T-shirt-Cartoon-Print-Unisex-Tops-Black-Stones-Streetwear-Sweatshirt-Men-Women-Tees.jpg" alt="Roupa Nana">
+            <div class="descricao">
+                <h4>Blusa Nana</h4>
+                <p>R$ 149,99</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Loja Gótica - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #d1d1d1;
+}
+
+a {
+    text-decoration: none;
+    color: #d1d1d1;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 3em;
+    color: #d1d1d1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.hero {
+    background-color: #3a3a3a;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #d1d1d1;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #c8a2d8;
+}
+
+.produtos {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #222;
+    width: 1000px;
+}
+
+.produto {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.produto h4 {
+    color: #d1d1d1;
+    font-size: 1.8em;
+}
+
+.produto p {
+    color: #c8a2d8;
+    font-size: 1.2em;
+}
+
+.comprar {
+    background-color: #c8a2d8;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.comprar:hover {
+    background-color: #a78fa2;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+</style>]
+<script>
+function adicionarAoCarrinho() {
+    alert("Produto adicionado ao carrinho!");
+}
+</script>
+</html>
