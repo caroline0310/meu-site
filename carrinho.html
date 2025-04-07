@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Loja Gótica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Fashion Paradise</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <p>Adicione produtos ao seu carrinho e finalize sua compra aqui.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vestido Paradise Kiss</td>
+                    <td>R$ 199,99</td>
+                    <td>1</td>
+                    <td>R$ 199,99</td>
+                </tr>
+                <tr>
+                    <td>Blusa Nana</td>
+                    <td>R$ 149,99</td>
+                    <td>2</td>
+                    <td>R$ 299,98</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total">
+            <h3>Total: R$ 499,97</h3>
+            <button class="finalizar">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Loja Gótica - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<style>
+    /* Estilos globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #d1d1d1;
+}
+
+a {
+    text-decoration: none;
+    color: #d1d1d1;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 3em;
+    color: #d1d1d1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.hero, .sobre, .carrinho {
+    padding: 40px;
+    text-align: center;
+}
+
+.sobre h2, .carrinho h2 {
+    font-size: 2.5em;
+    color: #d1d1d1;
+}
+
+.sobre p, .carrinho p {
+    font-size: 1.2em;
+    color: #c8a2d8;
+}
+
+.produtos, .carrinho table {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #222;
+}
+
+.produto, .carrinho table td {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.produto img, .carrinho table img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+<script>
+    function adicionarAoCarrinho() {
+    alert("Produto adicionado ao carrinho!");
+}
+
+</script>
+</html>
