@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div>
+    <h1>coloque suas informações abaixo:</h1>
+    <input type="text" id="usuario">
+    <input type="password" id="senha">
+    <button id="botao">Logar</button>
+ </div>
+</body>
+<script>
+    let usuariocorreto = 'Carol';
+    let senhacorreta = "1234";
+
+   
+   var  botao = document.getElementById("botao")
+
+   botao.addEventListener('click', function(){
+        var usuario = document.getElementById("usuario").value;
+        var senha = document.getElementById("senha").value;
+        if (usuario === usuariocorreto && senha === senhacorreta){
+            window.location.href = "index.html"
+        }
+        else{
+            alert('usuario ou senha incorretos');
+        }
+   });
+</script>
+</html>
