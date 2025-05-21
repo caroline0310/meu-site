@@ -4,8 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Gótica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Fonte gótica -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'UnifrakturCook', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #d1d1d1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #d1d1d1;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            font-size: 3em;
+            color: #d1d1d1;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .hero {
+            background-color: #3a3a3a;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            color: #d1d1d1;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #c8a2d8;
+        }
+
+        .produtos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #222;
+        }
+
+        .produto {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .produto img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .produto img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #c8a2d8;
+        }
+
+        .produto h4 {
+            color: #d1d1d1;
+            font-size: 1.2em;
+            margin: 10px 0 5px;
+        }
+
+        .produto p {
+            color: #c8a2d8;
+            font-size: 1em;
+        }
+
+        .comprar {
+        background-color: #c8a2d8;    
+        color: #333;
+        border: none;
+        padding: 8px 16px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s; /* Adicionando transição */
+        margin-top: 10px;
+    }
+
+    /* Efeito de zoom no botão */
+       .comprar:hover {
+        background-color: #a78fa2; /* Alterando a cor do fundo */
+        transform: scale(1.1); /* Efeito de zoom */
+        box-shadow: 0 0 15px #c8a2d8; /* Efeito de brilho ao passar o mouse */
+    }
+
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .buttons button {
+            background-color: #c8a2d8;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #a78fa2;
+        }
+
+        .produtos-masculinas, .produtos-femininas {
+            display: none;
+        }
+        .h3{
+           display: inline-block; /* Faz com que o quadro tenha o tamanho do texto */
+           background-color: #a884a8; /* Cor de fundo do quadro */
+           color: #fff; /* Cor do texto */
+           padding: 5px 5px; /* Espaçamento ao redor do texto dentro do quadro */
+           border-radius: 5px; /* Bordas arredondadas (opcional) */
+           height: 25px;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,7 +170,7 @@
             <ul>
                 <li><a href="/">Início</a></li>
                 <li><a href="/sobre">Sobre</a></li>
-                <li><a href="/carrinho">carrinho</a></li>
+                <li><a href="/carrinho">Carrinho</a></li>
             </ul>
         </nav>
     </header>
@@ -27,22 +180,91 @@
         <p>Explore a nossa coleção gótica inspirada em "Paradise Kiss" e "Nana".</p>
     </section>
 
-    <section class="produtos">
-        <h3>Produtos em Destaque</h3>
+    <div class="buttons">
+        <button onclick="mostrarFeminino()">Roupas Femininas</button>
+        <button onclick="mostrarMasculino()">Roupas Masculinas</button>
+    </div>
+
+    <!-- Seção de Produtos Femininos -->
+    <section class="produtos produtos-femininas">
+        <h3 class="h3">Produtos Femininos em Destaque</h3>
+
+        <!-- Produtos Femininos -->
         <div class="produto">
             <img src="https://i.pinimg.com/originals/71/e1/f1/71e1f15b6480a7d96d0b99583cc25d7f.jpg" alt="Roupa inspirada em Paradise">
             <div class="descricao">
-                <h4>Roupa inspirada em Paradise Kiss</h4>
+                <h4>Conjunto Paradise Kiss</h4>
                 <p>R$ 199,99</p>
-                <button class="comprar" onclick="adicionarAoCarrinho()">Comprar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
             </div>
         </div>
+
         <div class="produto">
-            <img src="https://ae01.alicdn.com/kf/Sa31e2f201a9e4d2b81c7d1c37763038cl/NANA-Japanese-Anime-T-shirt-Cartoon-Print-Unisex-Tops-Black-Stones-Streetwear-Sweatshirt-Men-Women-Tees.jpg" alt="Roupa Nana">
+            <img src="https://encurtador.com.br/E0mdi" alt="Vestido Gótico 1">
             <div class="descricao">
-                <h4>Blusa Nana</h4>
-                <p>R$ 149,99</p>
-                <button class="comprar" onclick="adicionarAoCarrinho()">Comprar</button>
+                <h4>Vestido Gótico Preto</h4>
+                <p>R$ 179,90</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="https://encurtador.com.br/lKXAt" alt="Blusa Gótica 2">
+            <div class="descricao">
+                <h4>Top Punk Lace</h4>
+                <p>R$ 119,99</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="https://encurtador.com.br/7pTIu" alt="Saia Gótica 3">
+            <div class="descricao">
+                <h4>Saia Estilo Lolita</h4>
+                <p>R$ 139,99</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Produtos Masculinos -->
+    <section class="produtos produtos-masculinas">
+        <h3>Produtos Masculinos em Destaque</h3>
+
+        <!-- Produtos Masculinos -->
+        <div class="produto">
+            <img src="https://encurtador.com.br/WUS3a" alt="Camiseta Gótica Masculina 1">
+            <div class="descricao">
+                <h4>roupa social gotico</h4>
+                <p>R$ 139,99</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="https://i.pinimg.com/originals/30/aa/26/30aa2667845cb61ec4318314105c6c09.jpg" alt="Camiseta Gótica Masculina 2">
+            <div class="descricao">
+                <h4>Terno gotico</h4>
+                <p>R$ 129,99</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="https://i.pinimg.com/originals/e9/68/cc/e968ccf78feba1f41eabc573a72f3096.jpg" alt="Jaqueta Gótica Masculina 1">
+            <div class="descricao">
+                <h4>Casaco vinho gotico</h4>
+                <p>R$ 299,99</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="https://i.pinimg.com/originals/c6/70/87/c6708723572ebd551395b6f16d834110.jpg" alt="Calça Gótica Masculina 1">
+            <div class="descricao">
+                <h4>Calça Gótica</h4>
+                <p>R$ 249,99</p>
+                <button class="comprar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
             </div>
         </div>
     </section>
@@ -51,117 +273,22 @@
         <p>&copy; 2025 Loja Gótica - Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Função para mostrar a seção feminina
+        function mostrarFeminino() {
+            document.querySelector('.produtos-femininas').style.display = 'flex';
+            document.querySelector('.produtos-masculinas').style.display = 'none';
+        }
+
+        // Função para mostrar a seção masculina
+        function mostrarMasculino() {
+            document.querySelector('.produtos-masculinas').style.display = 'flex';
+            document.querySelector('.produtos-femininas').style.display = 'none';
+        }
+
+        // Exibe a seção feminina por padrão
+        mostrarFeminino();
+    </script>
+
 </body>
-<style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #111;
-    color: #d1d1d1;
-}
-
-a {
-    text-decoration: none;
-    color: #d1d1d1;
-}
-
-header {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-header .logo h1 {
-    font-size: 3em;
-    color: #d1d1d1;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.hero {
-    background-color: #3a3a3a;
-    text-align: center;
-    padding: 40px 0;
-}
-
-.hero h2 {
-    font-size: 2.5em;
-    color: #d1d1d1;
-}
-
-.hero p {
-    font-size: 1.2em;
-    color: #c8a2d8;
-}
-
-.produtos {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #222;
-    width: 1000px;
-}
-
-.produto {
-    background-color: #444;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 30%;
-}
-
-.produto img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.produto h4 {
-    color: #d1d1d1;
-    font-size: 1.8em;
-}
-
-.produto p {
-    color: #c8a2d8;
-    font-size: 1.2em;
-}
-
-.comprar {
-    background-color: #c8a2d8;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.comprar:hover {
-    background-color: #a78fa2;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-</style>]
-<script>
-function adicionarAoCarrinho() {
-    alert("Produto adicionado ao carrinho!");
-}
-</script>
 </html>
