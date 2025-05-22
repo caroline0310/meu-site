@@ -41,23 +41,6 @@
             display: inline;
             margin: 0 15px;
         }
-
-        .hero {
-            background-color: #3a3a3a;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .hero h2 {
-            font-size: 2.5em;
-            color: #d1d1d1;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            color: #c8a2d8;
-        }
-
         .produtos {
             display: flex;
             flex-wrap: wrap;
@@ -111,13 +94,11 @@
         margin-top: 10px;
     }
 
-    /* Efeito de zoom no botão */
-       .comprar:hover {
+    .comprar:hover {
         background-color: #a78fa2; /* Alterando a cor do fundo */
         transform: scale(1.1); /* Efeito de zoom */
         box-shadow: 0 0 15px #c8a2d8; /* Efeito de brilho ao passar o mouse */
     }
-
 
         footer {
             background-color: #222;
@@ -158,6 +139,13 @@
            border-radius: 5px; /* Bordas arredondadas (opcional) */
            height: 25px;
         }
+        .links:hover {
+            text-shadow: 0 0 15px #c8a2d8;
+            font-size: 20px;
+            transition: background-color 0.5s, transform 0.5s;
+            
+        }
+        
     </style>
 </head>
 <body>
@@ -165,20 +153,17 @@
     <header>
         <div class="logo">
             <h1>Fashion Paradise</h1>
+            <p>Explore a nossa coleção gótica inspirada em "Paradise Kiss" e "Nana".</p>
         </div>
         <nav>
             <ul>
-                <li><a href="/">Início</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                <li><a href="/carrinho">Carrinho</a></li>
+                <li><a class="links" href="/">Início</a></li>
+                <li><a class="links" href="/sobre">Sobre</a></li>
+                <li><a class="links" href="/carrinho">Carrinho</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h2>Estilo Único, Roupas Incríveis</h2>
-        <p>Explore a nossa coleção gótica inspirada em "Paradise Kiss" e "Nana".</p>
-    </section>
 
     <div class="buttons">
         <button onclick="mostrarFeminino()">Roupas Femininas</button>
